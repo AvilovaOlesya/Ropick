@@ -24,7 +24,8 @@ int main() {
     setlocale(LC_ALL, "RUS");
     const int size = 2;
     STUD students[size];
-    for (int i = 0; i < size; ++i) {
+    for (int i = 0; i < size; ++i) 
+    {
         cout << "Введите данные о студенте " << i + 1 << ":\n";
         cout << "Фамилия и инициалы (без пробелов): ";
         cin >> students[i].name;
@@ -38,9 +39,11 @@ int main() {
     }
 
     bool found = false;
-    for (int i = 0; i < size; ++i) 
+    for (int i = 0; i < size; ++i)
     {
-        if (calculateAverage(students[i].ses, 4) > 4.2) {
+   if (calculateAverage(students[i].ses, 4) > 4.2) 
+   {
+
             found = true;
             cout << students[i].name << ", Группа: " << students[i].group
                 << ", Средний балл: " << calculateAverage(students[i].ses, 4) << "\n";
